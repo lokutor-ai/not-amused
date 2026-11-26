@@ -180,11 +180,18 @@ func _light() -> void:
 	sun.rotation_degrees = Vector3(-46, 34, 0)
 	sun.light_color = Color("#fff1d8")
 	sun.light_energy = 0.85
-	sun.shadow_enabled = true
 	sun.shadow_normal_bias = 2.5
 	sun.directional_shadow_mode = DirectionalLight3D.SHADOW_ORTHOGONAL
 	sun.directional_shadow_max_distance = 18.0
 	sun.shadow_blur = 0.6
+	# A browser draws with the Compatibility renderer (WebGL 2). There a light with shadows is drawn in a pass of its own
+	# and added on top in sRGB: the room came out about 15% lighter, washed out and cold, and every mesh was drawn twice
+	# plus a shadow map each frame. Without the sun's shadows it looks as it does on a desktop, for half the work.
+	sun.shadow_enabled = RenderingServer.get_current_rendering_method() != "gl_compatibility"
+	if OS.has_feature("web"):
+		# A page's canvas is in device pixels. The 3D drawn at about the page's own pixels (1/devicePixelRatio, at least
+		# half) costs a quarter on a high-density screen and looks the same at that size; text and HUD stay sharp.
+		get_viewport().scaling_3d_scale = clampf(1.0 / DisplayServer.screen_get_scale(), 0.5, 1.0)
 	add_child(sun)
 
 
