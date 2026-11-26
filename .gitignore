@@ -1,0 +1,16 @@
+# Godot: the import cache and exports
+.godot/
+/build/
+/android/
+export_presets.cfg
+*.apk
+*.aab
+
+# Blender backups
+*.blend1
+
+# Recordings and anything with a key
+*.mp4
+media/
+.env
+*.keystore

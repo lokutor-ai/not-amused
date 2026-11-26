@@ -1,0 +1,14 @@
+{
+  "voice": "M1",
+  "language": "en",
+  "jester": "M1",
+  "endpoint_s": 0.5,
+  "greeting": "Next! You have one minute. Make me laugh.",
+  "turns": [
+    {"heard": "Knock knock!", "shot": "jester", "mood": "happy", "pause": 0.5,
+     "do": [{"tool": "pull_lever", "args": {}}, {"say": "No."}]}
+  ],
+  "lines": [{"text": "Next!", "voice": "M1"}, {"text": "No.", "voice": "M1"}, {"text": "Enough. Next!", "voice": "M1"}],
+  "title_seconds": 2.2,
+  "end_seconds": 3.0
+}

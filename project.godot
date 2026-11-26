@@ -1,0 +1,39 @@
+config_version=5
+
+[application]
+
+config/name="Not Amused"
+config/description="Make the king laugh. With your voice."
+run/main_scene="res://main.tscn"
+config/features=PackedStringArray("4.4", "Forward Plus")
+
+[audio]
+
+driver/enable_input=true
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/lokutor/plugin.cfg")
+
+[importer_defaults]
+
+scene={
+"animation/fps": 30,
+"meshes/create_shadow_meshes": false,
+"meshes/generate_lods": false,
+"meshes/ensure_tangents": false
+}
+
+[rendering]
+
+anti_aliasing/quality/msaa_3d=2
+lights_and_shadows/directional_shadow/size=4096
+lights_and_shadows/directional_shadow/soft_shadow_filter_quality=5
+environment/defaults/default_clear_color=Color(0.17, 0.09, 0.2, 1)

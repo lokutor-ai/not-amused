@@ -1,0 +1,284 @@
+{
+ "vertices": 28598,
+ "faces": 26319,
+ "height": 2.118,
+ "face_z": 1.5,
+ "head": [
+  1.14,
+  1.92
+ ],
+ "shapes": {
+  "viseme_sil": [
+   0,
+   0.0
+  ],
+  "viseme_PP": [
+   6282,
+   0.0251
+  ],
+  "viseme_FF": [
+   6221,
+   0.0297
+  ],
+  "viseme_TH": [
+   6456,
+   0.041
+  ],
+  "viseme_DD": [
+   6464,
+   0.0559
+  ],
+  "viseme_kk": [
+   6545,
+   0.0668
+  ],
+  "viseme_CH": [
+   6424,
+   0.0608
+  ],
+  "viseme_SS": [
+   6112,
+   0.0444
+  ],
+  "viseme_nn": [
+   6388,
+   0.0367
+  ],
+  "viseme_RR": [
+   6456,
+   0.0532
+  ],
+  "viseme_aa": [
+   6782,
+   0.1787
+  ],
+  "viseme_E": [
+   6633,
+   0.1085
+  ],
+  "viseme_I": [
+   6464,
+   0.0706
+  ],
+  "viseme_O": [
+   6677,
+   0.1252
+  ],
+  "viseme_U": [
+   6521,
+   0.092
+  ],
+  "smile": [
+   7462,
+   0.0898
+  ],
+  "grin": [
+   7572,
+   0.111
+  ],
+  "laugh": [
+   7588,
+   0.2394
+  ],
+  "frown": [
+   6029,
+   0.027
+  ],
+  "gasp": [
+   6983,
+   0.1407
+  ],
+  "grit": [
+   2933,
+   0.0416
+  ],
+  "pout": [
+   2123,
+   0.077
+  ],
+  "smirk": [
+   7106,
+   0.0744
+  ],
+  "wobble": [
+   7000,
+   0.039
+  ],
+  "puff": [
+   7182,
+   0.0835
+  ],
+  "blink_l": [
+   188,
+   0.3217
+  ],
+  "blink_r": [
+   188,
+   0.3217
+  ],
+  "happy_eyes": [
+   1148,
+   0.2963
+  ],
+  "bored_eyes": [
+   376,
+   0.1885
+  ],
+  "angry_eyes": [
+   584,
+   0.1217
+  ],
+  "sad_eyes": [
+   312,
+   0.0989
+  ],
+  "squint": [
+   728,
+   0.1093
+  ],
+  "wide_eyes": [
+   3120,
+   0.0539
+  ],
+  "brow_up_l": [
+   230,
+   0.1051
+  ],
+  "brow_up_r": [
+   230,
+   0.1045
+  ],
+  "brow_angry": [
+   460,
+   0.1188
+  ],
+  "brow_sad": [
+   460,
+   0.1438
+  ],
+  "look_l": [
+   640,
+   0.0393
+  ],
+  "look_r": [
+   640,
+   0.0393
+  ],
+  "look_u": [
+   640,
+   0.0586
+  ],
+  "look_d": [
+   640,
+   0.0549
+  ],
+  "mouth_up": [
+   2123,
+   0.0257
+  ]
+ },
+ "clips": {
+  "bored": {
+   "len": 6.4,
+   "loop": true,
+   "seam_mm": 0.0,
+   "hand_peak_m_s": 0.6
+  },
+  "listen": {
+   "len": 4.0,
+   "loop": true,
+   "seam_mm": 0.0,
+   "hand_peak_m_s": 0.07
+  },
+  "think": {
+   "len": 4.0,
+   "loop": true,
+   "seam_mm": 0.0,
+   "hand_peak_m_s": 0.06
+  },
+  "talk_a": {
+   "len": 3.6,
+   "loop": true,
+   "seam_mm": 0.0,
+   "hand_peak_m_s": 0.29
+  },
+  "talk_b": {
+   "len": 3.2,
+   "loop": true,
+   "seam_mm": 0.0,
+   "hand_peak_m_s": 6.41
+  },
+  "snort": {
+   "len": 1.5,
+   "loop": false,
+   "seam_mm": null,
+   "hand_peak_m_s": 2.42
+  },
+  "giggle": {
+   "len": 2.0,
+   "loop": true,
+   "seam_mm": 0.0,
+   "hand_peak_m_s": 0.35
+  },
+  "belly_laugh": {
+   "len": 2.4,
+   "loop": true,
+   "seam_mm": 0.0,
+   "hand_peak_m_s": 1.18
+  },
+  "offended": {
+   "len": 1.8,
+   "loop": false,
+   "seam_mm": null,
+   "hand_peak_m_s": 4.25
+  },
+  "angry": {
+   "len": 1.9,
+   "loop": false,
+   "seam_mm": null,
+   "hand_peak_m_s": 1.72
+  },
+  "confused": {
+   "len": 2.4,
+   "loop": false,
+   "seam_mm": null,
+   "hand_peak_m_s": 0.77
+  },
+  "lever": {
+   "len": 2.0,
+   "loop": false,
+   "seam_mm": null,
+   "hand_peak_m_s": 0.77
+  },
+  "wipe_tear": {
+   "len": 2.6,
+   "loop": false,
+   "seam_mm": null,
+   "hand_peak_m_s": 4.75
+  },
+  "clap": {
+   "len": 1.2,
+   "loop": true,
+   "seam_mm": 0.0,
+   "hand_peak_m_s": 3.15
+  }
+ },
+ "springs": {
+  "swing": {
+   "crown": [
+    230.0,
+    9.0,
+    0.0,
+    15.0
+   ]
+  },
+  "soft": {
+   "belly": [
+    260.0,
+    10.0,
+    0.07
+   ]
+  }
+ },
+ "glb_kb": 4971
+}

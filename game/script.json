@@ -1,0 +1,27 @@
+{
+  "voice": "M1",
+  "language": "en",
+  "jester": "F2",
+  "endpoint_s": 0.5,
+  "title_seconds": 2.2,
+  "greeting": "Next! Ah. Another jester. [sigh] You have one minute. Make me laugh.",
+  "turns": [
+    {"heard": "Your Majesty! Why did the chicken cross the moat?", "shot": "jester", "pause": 0.5,
+     "do": [{"tool": "react", "args": {"reaction": "bored", "amusement": 1}}, {"say": "I ate the chicken. Next joke."}]},
+    {"heard": "My horse told me a secret about you.", "pause": 0.5,
+     "do": [{"tool": "react", "args": {"reaction": "confused", "amusement": 5}}, {"say": "Gerald? What did Gerald say?"}]},
+    {"heard": "He said, neigh comment!", "shot": "jester_close", "mood": "sly", "pause": 0.3,
+     "do": [{"tool": "react", "args": {"reaction": "snort", "amusement": 7}}, {"say": "[laugh] No! That was a cough. Kings cough."}]},
+    {"heard": "What do you call a king who is only twelve inches tall?", "hint": {"side": "r", "text": "Psst. Do the one about the ruler."}, "shot": "jester", "pause": 0.5,
+     "do": [{"tool": "react", "args": {"reaction": "confused", "amusement": 3}}, {"say": "I do not know. What?"}]},
+    {"heard": "A ruler!", "shot": "jester_close", "mood": "laugh", "pause": 0.2,
+     "do": [{"tool": "react", "args": {"reaction": "giggle", "amusement": 8}}, {"say": "Stop it. [laugh] I am a very serious... [laugh]"}]},
+    {"heard": "Also, your crown is on backwards.", "shot": "play", "mood": "sly", "pause": 0.5,
+     "do": [{"tool": "react", "args": {"reaction": "laugh", "amusement": 10}}, {"say": "It is? Twelve years! [laugh] And nobody told me! [laugh] Pardoned!"}]}
+  ],
+  "lines": [
+    {"text": "Next!", "voice": "M1"}, {"text": "No.", "voice": "M1"}, {"text": "Enough. Next!", "voice": "M1"},
+    {"text": "Psst. Do the one about the ruler.", "voice": "M3"}
+  ],
+  "end_seconds": 4.0
+}
