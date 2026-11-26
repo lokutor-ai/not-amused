@@ -651,7 +651,9 @@ func _process(delta: float) -> void:
 		_leak.hear(agent.microphone.level, agent.voice_level(), delta)
 	hud.mic.device = _mic_label(level, delta) if demo == null and hud.mic.visible else ""
 	hud.move_bubble("jester", _beside(stage.jester))
-	hud.mic.open = not (agent.mute_mic_while_speaking and king_talks)
+	# Shut until he can be told something: through his voice, the moment after it while the room still echoes it (longer
+	# on phones and in browsers), and while the guards talk.
+	hud.mic.open = agent.hears_microphone if phase == Phase.PLAY and agent.microphone != null else not (agent.mute_mic_while_speaking and king_talks)
 	sound.duck = 1.0 if king_talks or stage.jester.speaking or _guard_talking != "" else 0.0
 	_king_caption()
 	if agent.is_speaking:

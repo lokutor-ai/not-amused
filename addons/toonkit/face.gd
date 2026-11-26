@@ -62,8 +62,11 @@ func setup(face, random_seed := 7) -> ToonFace:
 	return self
 
 
-## A shape's weight, on every mesh that has it.
+## A shape's weight, on every mesh that has it. Barely on is off: a shape at rest costs nothing, while one that is on at
+## all is one more pass over the mesh on the GPU every frame in a browser.
 func _put(shape: String, weight: float) -> void:
+	if absf(weight) < 0.004:
+		weight = 0.0
 	for at in _index[shape]:
 		(at[0] as MeshInstance3D).set_blend_shape_value(at[1], weight)
 

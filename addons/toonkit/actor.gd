@@ -39,6 +39,8 @@ func _ready() -> void:
 	model = (load("res://assets/%s.glb" % kind) as PackedScene).instantiate()
 	add_child(model)
 	Toon.apply(model, 3.4, {}, colours)
+	if Toon.few_draws():
+		Toon.batch(model)
 	skeleton = model.find_children("*", "Skeleton3D", true, false)[0]
 	anim = model.find_children("*", "AnimationPlayer", true, false)[0]
 	var meshes := model.find_children("*", "MeshInstance3D", true, false)
@@ -63,6 +65,13 @@ func _ready() -> void:
 	lips = LokutorLipSync.new()
 	lips.faces = faces
 	add_child(lips)
+
+
+## Out of sight (the jester before he comes in, the queue behind the door when the camera looks ahead) it does nothing:
+## its clips, skeleton, springs and face wait until it shows again.
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_VISIBILITY_CHANGED:
+		process_mode = PROCESS_MODE_INHERIT if is_visible_in_tree() else PROCESS_MODE_DISABLED
 
 
 ## Plays a clip. A clip that does not loop goes back to `base`, or to `then`.

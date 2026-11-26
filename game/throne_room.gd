@@ -49,6 +49,10 @@ func _ready() -> void:
 	_put("lever_base", Vector3(-1.62, 0.6, 0.62))
 	lever = _put("lever_arm", Vector3(-1.62, 1.42, 0.62))
 	_dust()
+	if Toon.few_draws():
+		# The still props in two meshes: a browser draws them in a few calls instead of some two hundred.
+		Toon.batch(self, [leaf_l, leaf_r, lever, back] + _flames)
+		Toon.batch(back)
 
 
 ## The half of the room behind the player. Only there when the camera looks that way.
